@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube Downloader</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#111827;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:500px;
+    background:#1f2937;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+h1{
+    color:#fff;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:8px;
+    font-size:16px;
+    margin-bottom:20px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+button{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+#audio{
+    background:#16a34a;
+}
+
+#video{
+    background:#2563eb;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+#status{
+    color:white;
+    text-align:center;
+    margin-top:20px;
+    font-size:15px;
+}
+/* Tablet */
+@media (max-width:768px){
+
+    .container{
+        width:90%;
+        padding:25px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    input{
+        font-size:15px;
+        padding:14px;
+    }
+
+    button{
+        font-size:15px;
+        padding:14px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width:480px){
+
+    body{
+        padding:20px;
+    }
+
+    .container{
+        width:100%;
+        padding:20px;
+        border-radius:10px;
+    }
+
+    h1{
+        font-size:24px;
+        margin-bottom:20px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    button{
+        width:100%;
+        font-size:16px;
+    }
+
+    input{
+        font-size:14px;
+    }
+
+    #status{
+        font-size:14px;
+    }
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>YouTube Downloader</h1>
+
+    <input
+        type="text"
+        id="url"
+        placeholder="Paste YouTube URL">
+
+    <div class="buttons">
+
+        <button id="audio">
+            🎵 Download Audio
+        </button>
+
+        <button id="video">
+            🎥 Download Video
+        </button>
+
+    </div>
+
+    <p id="status"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>s
