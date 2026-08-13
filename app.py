@@ -17,9 +17,12 @@ app.add_middleware(
 
 @app.get("/")
 def home():
-    return {
-        "message": "YouTube Downloader API Running"
-    }
+    return FileResponse("index.html")
+
+
+@app.get("/script.js")
+def serve_script():
+    return FileResponse("script.js")
 
 
 @app.get("/download/mp3")

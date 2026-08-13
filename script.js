@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:8000";
+const API = window.location.origin;
 
 const urlInput = document.getElementById("url");
 const audioBtn = document.getElementById("audio");
